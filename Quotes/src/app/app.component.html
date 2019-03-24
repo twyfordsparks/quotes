@@ -1,9 +1,12 @@
 
 <div style="text-align:center">
   <h1>
-    quotes
+    Quotes
   </h1>
-  <p>I will make a quote generator today.</p>
+  <ul>
+    <li *ngFor='let quotes of quote'>{{quotes}}</li>
+  </ul>
 </div>
 <h2>Here are a few quotes to get started,: </h2>
+<p></p>
 <router-outlet></router-outlet>
