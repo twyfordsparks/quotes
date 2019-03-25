@@ -1,12 +1,12 @@
 <h1>My Quotes</h1>
 <ul>
 
-<div class="contrainer">
+<div class="contrainer-fluid">
   <div class="row">
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
    <div *ngFor='let quote of quotes;let i = index'>
-     <li id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
+     <li id="{{i}}" appStrikethrough>{{ quote.quoteName }} due on {{quote.completeDate|date|uppercase}}</li>
      <button class="btn btn-warning" (click)='toogleDetails(i)'>Toogle Details</button>
      <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'>
      </app-quote-details>

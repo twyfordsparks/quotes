@@ -1,3 +1,6 @@
-<p>{{quote.description}}</p>
-<p>This quote will be completed in {{quote.completeDate|dateCount}} days</p>
+<p>Author:<em>{{quote.author}}</em></p>
+
+<p>This quote was posted {{quote.completeDate|dateCount}} days</p>
 <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete quote</button>
+<button type="button" (click)='Upvote()' class="btn btn-warning">Upvote{{upvote}}</button>
+<button type="button" (click)='downVote()' class="btn btn-warning">Downvote{{downvote}}</button>
