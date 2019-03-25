@@ -16,6 +16,13 @@ export class QuoteComponent implements OnInit {
     new Quote(6, 'A friend is someone who knows all about you and still loves you', 'Happiness is a direction, not a place.', new Date(25, 4, 2019)),
     new Quote(7, 'Love is like the wind, you cant see it but you can feel it', 'Happiness is a direction, not a place.', new Date(25, 4, 2019))
   ]
+   addNewQuote(quote){
+     let quoteLength = this.quotes.length;
+     quote.id = quoteLength + 1;
+     quote.completeDate = new Date(quote.completeDate)
+     this.quotes.push(quote)
+
+   }
   deleteQuote(isComplete, index) {
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}`)
