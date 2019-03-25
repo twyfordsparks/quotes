@@ -16,9 +16,16 @@ export class QuoteComponent implements OnInit {
     new Quote(6, 'A friend is someone who knows all about you and still loves you', 'Happiness is a direction, not a place.'),
     new Quote(7, 'Love is like the wind, you cant see it but you can feel it', 'Happiness is a direction, not a place.')
   ]
+  completeQuote(isComplete, index) {
+    if (isComplete) {
+      this.quotes.splice(index, 1);
+    }
+  }
+  
   toogleDetails(index) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
+
 
   constructor() { }
 
