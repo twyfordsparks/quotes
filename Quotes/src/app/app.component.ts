@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quote: string[];
+  quotes: string[]
   constructor(){
-    this.quote = ["You only live once", "Education is the most powerful weapon which you can use to change the world.", "Yesterday I was clever, so I wanted to change the world. Today I am wise, so I am changing myself.", "It’s only after you’ve stepped outside your comfort zone that you begin to change, grow, and transform", "Be the change you want to see in the world"]
-    
+    this.quotes = ['It s not lack of love,but a lack of friendship that makes unhappy marriages.','We accept the love we think we deserve.','Dont cry because it is over,smile because it happened.','For every minute you are angry,you lose sixty seconds of happines.','The good you do today will be forgotten tomorrow.','A friend is someone who knows all about you and still loves you.','Love is like the wind,you cant see it but you can feel it.']
   }
 }
