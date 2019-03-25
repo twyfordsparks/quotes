@@ -1,11 +1,13 @@
 <h1>My Quotes</h1>
 <ul>
- <div *ngFor='let quote of quotes;let i = index'>
-   <li id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
-    <button (click)='toogleDetails(i)'>Toogle Details</button>
-  <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'>
-  </app-quote-details>
-  </div>
+<div class="contrainer">
+   <div *ngFor='let quote of quotes;let i = index'>
+     <li id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>
+     <button class="btn btn-warning" (click)='toogleDetails(i)'>Toogle Details</button>
+     <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='deleteQuote($event,i)'>
+     </app-quote-details>
+   </div>
+</div>
 
 </ul>
 <p *ngIf='quotes.length > 5'></p>
